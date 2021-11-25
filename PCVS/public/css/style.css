@@ -1,0 +1,199 @@
+/* 
+.form-signin .form-floating:focus-within {
+z-index: 2;
+} */
+
+.jumbotron {
+    margin-bottom: 8rem;
+    background-color: #ffffff;
+    border-radius: .3rem;
+    background-size: cover;
+    height: 680px;
+
+} 
+
+.jumbotron .text-4 {
+    color: rgb(45, 171, 209);
+    text-align: left;
+    /* font-family: 'Montserrat-Extrabold'; */
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    font-weight: 400;
+}
+/* #img-background{
+    position: relative;
+    top: 0px;
+    left: 60px;
+    width: 52%;
+    height: 52%;
+} */
+
+
+/* Info */
+.slide{
+    margin: auto;
+}
+.info
+{
+   position: relative;
+   width: 100%;
+   margin-top:-15%;
+   display: inline-block;
+   margin: auto;
+   padding-top: 10px;
+   padding-bottom: 50px;;
+   color: rgb(255, 255, 255);
+
+}
+.info h1
+{
+   text-align: center;
+   color: rgb(255, 255, 255);
+   padding: 40px;
+   font-size:40px;
+   font-weight:700;
+   text-shadow: 0px 0px 13px rgba(150, 150, 150, 1);
+
+}
+
+.circle 
+{ 
+   margin: auto;
+   width: 100px; 
+   height: 100px; 
+   background: #ffffff; 
+   border-radius: 50%;
+} 
+
+.circle i
+{
+   line-height: 100px;
+   font-size: 40px;
+   color: #05b8ff;
+   
+}
+
+.slot 
+{
+   position : relative;
+   border: 1px;
+   transition: top ease 0.5s;
+}
+ 
+.slot i 
+{
+   text-align: center;
+   width: 100%;
+   height: auto;
+   
+}
+
+.slot h3
+{
+   text-align: center;
+   text-shadow: 0px 0px 13px rgba(150, 150, 150, 1);
+}
+.description
+{
+   font-size : 14px;
+   padding: 15px;
+   text-align: center;
+}
+ 
+* 
+{
+   box-sizing: border-box;
+}
+
+.background-blue
+{
+    margin-top:-3%;
+    background-color: #a2d9ff;;
+}
+
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.form-registration input {
+    border-radius: 0;
+}
+
+.section-show{
+    margin-top:-15%;
+    padding: 10% 5% 5% 5%;
+}
+.section-show h4{
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
+.section-show .subheading{
+    color: #3931af;
+    font-size: 20px;
+}
+.section-show .row
+{
+    margin-top: 10%;
+}
+.how-img 
+{
+    text-align: center;
+}
+.how-img img{
+    width: 50%;
+}
+@media (min-width: 992px) {
+    #img-background
+    {
+        position: absolute;
+        top: 10%;
+        right: 15%;
+        width: 30%;
+        height: 50%;
+    }
+}
+@media (max-width: 1556px) {
+    .background-blue
+    {
+        margin-top:-10%;
+        background-color: #a2d9ff;;
+    }
+
+}
+@media (max-width: 350px) {
+    .background-blue
+    {
+        margin-top:-40%;
+        background-color: #a2d9ff;;
+    }
+
+}
+@media (max-width: 509px) {
+    .background-blue
+    {
+        margin-top:-35%;
+        background-color: #a2d9ff;;
+    }
+
+}
+
+@media (max-width: 992px)
+{
+    #img-background{
+        position: relative;
+        top: 0px;
+        left: 60px;
+        width: 52%;
+        height: 52%;
+    }
+}
+
