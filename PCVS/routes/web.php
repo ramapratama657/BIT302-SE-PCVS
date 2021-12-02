@@ -38,17 +38,33 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');;
 Route::post('/login',[LoginController::class, 'auth'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout']);
 //register 
-Route::get('/registerHA', [RegisterHAController::class, 'index']);
-Route::post('/registerHA', [RegisterHAController::class, 'store']);
-Route::post('/addCentre', [RegisterHAController::class, 'addCentre']);
+
 
  
 Route::get('/registerPA', [RegisterPAController::class, 'index']);
 Route::post('/registerPA', [RegisterPAController::class, 'store']);
 
 
-Route::middleware(['auth','checkRole:admin'])->group(function()
+// Route::middleware(['auth','checkRole:master'])->group(function()
+// {
+//     Route::get('/registerHA', [RegisterHAController::class, 'index']);
+//     Route::post('/registerHA', [RegisterHAController::class, 'store']);
+//     Route::post('/addCentre', [RegisterHAController::class, 'addCentre']);
+//     Route::get('/dashboard',[DashboardController::class, 'index_admin']);
+//     Route::get('/batch',[BatchController::class, 'index']);
+//     Route::post('/addBatch', [BatchController::class, 'addBatch']);
+//     Route::get('/vaccinationAppoint/{id}/appointment',[AppointmentController::class, 'appointment']);
+//     // Route::get('/confirm/{id}/confirm',[AppointmentController::class, 'confirm']);
+//     Route::post('/confirm',[AppointmentController::class, 'confirm']);
+//     Route::post('/reject',[AppointmentController::class, 'reject']);
+
+// });
+Route::middleware(['auth','checkRole:admin,master'])->group(function()
 {
+    Route::get('/registerHA', [RegisterHAController::class, 'index'])->middleware('role:master');;
+    Route::post('/registerHA', [RegisterHAController::class, 'store'])->middleware('role:master');;
+    Route::post('/addCentre', [RegisterHAController::class, 'addCentre'])->middleware('role:master');;
+
     Route::get('/dashboard',[DashboardController::class, 'index_admin']);
     Route::get('/batch',[BatchController::class, 'index']);
     Route::post('/addBatch', [BatchController::class, 'addBatch']);
