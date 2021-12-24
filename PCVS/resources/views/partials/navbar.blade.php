@@ -20,10 +20,10 @@
                     Wellcome {{auth()->user()->name}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown08" >
-                    @if (auth()->user()->role == 'admin')
-                    <li><a class="dropdown-item" href="/dashboard"> <i class="fas fa-home"> Dashboard</i></a></li>  
+                    @if (auth()->user()->role == 'patient' )
+                    <li><a class="dropdown-item" href="/dashboard_p"> <i class="fas fa-home"> Dashboard</i></a></li>  
                     @else
-                    <li><a class="dropdown-item" href="/dashboard_p"><i class="fas fa-home"> Dashboard</i></a></li>  
+                    <li><a class="dropdown-item" href="/dashboard"><i class="fas fa-home"> Dashboard</i></a></li>  
                     @endif
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="" data-bs-target="#logoutModal" data-bs-toggle="modal"><i class="fas fa-sign-out-alt"> Logout</i></a></li>

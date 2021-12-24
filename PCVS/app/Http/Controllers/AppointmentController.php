@@ -110,6 +110,38 @@ class AppointmentController extends Controller
         }
         
     }
+    public function administrated(Request $request)
+    {   
+        $this->validate($request, [
+            'remark' =>'required|max:255'
+        ]  
+        );
+        $batch_id = $request->batchId;
+        $test = Vaccination::find($request->vaccinationId);
+        $batch = Batch::find($batch_id);
+        // $userEmail = User::find($test->patientId)->email;
+        if($test)
+        {
+            // $batch_increment = Batch::where('id', $batch_id)->increment('quantityAdministrated', 1);
+            $batch->increment('quantityAdministered', 1) ;
+            $test->remarks = $request->remark;
+            $test->status = "Administered";
+            $test->save();
+            // $details = [
+            //     'title' => 'Notification Vaccination',
+            //     'body' => 'Appointment request Administrated. With remarks : ',
+            //     'remarks' =>$request->remark,
+            //     'img' =>'reject'
+            // ];
+            // \Mail::to($userEmail)->send(new \App\Mail\MyEmail($details));
+            return  redirect('/vaccinationAppoint/'.$batch_id.'/appointment')->with('success','Appointment has been administered');
+        }
+        else
+        {
+            return  redirect('/vaccinationAppoint/'.$batch_id.'/appointment')->with('error','Error administered the appointment');
+        }
+        
+    }
 
 
 

@@ -69,9 +69,11 @@ Route::middleware(['auth','checkRole:admin,master'])->group(function()
     Route::get('/batch',[BatchController::class, 'index']);
     Route::post('/addBatch', [BatchController::class, 'addBatch']);
     Route::get('/vaccinationAppoint/{id}/appointment',[AppointmentController::class, 'appointment']);
+
     // Route::get('/confirm/{id}/confirm',[AppointmentController::class, 'confirm']);
     Route::post('/confirm',[AppointmentController::class, 'confirm']);
     Route::post('/reject',[AppointmentController::class, 'reject']);
+    Route::post('/administrated',[AppointmentController::class, 'administrated']);
 
 });
 

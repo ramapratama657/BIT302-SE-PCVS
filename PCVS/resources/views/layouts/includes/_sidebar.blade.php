@@ -1,11 +1,15 @@
-
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
   <div class="position-sticky pt-3">
     <ul class="nav flex-column">
-      @if(auth()->user()->role == 'admin')
-      <li class="nav-item"><a class="nav-link {{ ($active =="dashboard") ? 'active' : ''}}" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+      @if(auth()->user()->role == 'admin' or auth()->user()->role == 'master')
+      <li class="nav-item"><a class="nav-link {{ ($active =='dashboard') ? 'active' : ''}}" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+      @if(auth()->user()->username == 'admin1')
+      <li class="nav-item"><a class="nav-link {{ ($active =='users') ? 'active' : ''}}" aria-current="page" href="/registerHA"><i class="fas fa-user"></i> Add Administrator</a></li>
+      @endif
+      @elseif(auth()->user()->role == 'admin')
+      <li class="nav-item"><a class="nav-link {{ ($active =='dashboard') ? 'active' : ''}}" aria-current="page" href="/dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
       @elseif(auth()->user()->role == 'patient')
-      <li class="nav-item"><a class="nav-link {{ ($active =="dashboard") ? 'active' : ''}}" aria-current="page" href="/dashboard_p"><i class="fas fa-home"></i> Dashboard</a></li>
+      <li class="nav-item"><a class="nav-link {{ ($active =='dashboard') ? 'active' : ''}}" aria-current="page" href="/dashboard_p"><i class="fas fa-home"></i> Dashboard</a></li>
       @endif
     </ul>
 
@@ -16,7 +20,7 @@
       </a>
     </h6>
     <ul class="nav flex-column mb-auto ">
-      @if (auth()->user()->role == 'admin')
+      @if (auth()->user()->role == 'admin' or auth()->user()->role == 'master')
       <li class="nav-item">
         <a class="nav-link {{ ($active =="batch") ? 'active' : ''}}" href="/batch">
           <i class="far fa-list-alt"></i>
@@ -42,18 +46,17 @@
 
 </nav>
 
-<!-- Modal -->
-<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center  p-3">
-      <div class="modal-body text-center">
-        <h4>Are you sure you want to Log Out ?</h4> 
-        {{-- <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i> --}}
-        <i class="fas fa-sign-out-alt fa-5x fa-fw"></i> 
-      </div>
-      <div class="d-grid gap-2 col-6 mx-auto">
-        <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
-        <a href="/logout" class="btn btn-secondary mb-3 rounded-pill">Logout</a>
+<!-- Small modal -->
+<div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h2 class="text-center"><i class="fas fa-sign-out-alt"></i></h2>
+        <p class="text-center">Are you sure you want to log-out? <br/></p>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <a href="/logout" class="btn btn-primary mx-2">Log out</a>
+        </div>
       </div>
     </div>
   </div>

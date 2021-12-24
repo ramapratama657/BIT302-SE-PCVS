@@ -58,6 +58,6 @@ class RegisterHAController extends Controller
             'address' => 'required|max:255',
         ]);
         Centre::create($request->all());
-        return redirect('/registerHA')->with('success','Successfully register test centre');
+        return redirect('/registerHA')->with('success','Successfully register healthcare centre');
     }
 }

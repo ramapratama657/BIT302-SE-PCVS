@@ -68,10 +68,12 @@
                             
                         @endif
                         @if($item->status == "Confirmed")
-                            <td><button class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-batch-id="{{$item->batchId}}" data-id="{{$item->id}}" data-status="{{$item->status}}" data-bs-target="#administered">Administered</button> </td>
+                            <td><button class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-batch-id-a="{{$item->batchId}}" data-id-a="{{$item->id}}" data-status-a="{{$item->status}}" data-bs-target="#administrated">Administered</button> </td>
     
                         @elseif($item->status == "Rejected")
                             <td> Rejected</td>
+                        @elseif($item->status == "Administered")
+                            <td> Administered</td>
                         @else
                             <td>
                                 <button class="btn btn-success btn-sm"  data-bs-toggle="modal" data-batch-id="{{$item->batchId}}" data-id="{{$item->id}}" data-status="{{$item->status}}" data-date="{{$item->appointmentDate}}" data-bs-target="#confirm">Confirm</button> 
@@ -153,6 +155,35 @@
     </div>
 </div>
 
+<!-- Modal Administrated -->
+<div class="modal fade" id="administrated" tabindex="-1" aria-labelledby="AdministratedLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-light">
+            <h5 class="modal-title" id="exampleModalLabel">Administered Form</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/administrated" method="post">
+                    @csrf
+                    <div class="mb-3">
+                        <input type="hidden" class="form-control" id="vaccinationIdA" name="vaccinationId" value="">
+                        <input type="hidden" class="form-control" id="batchIdA" name="batchId" value="">
+                        <input type="hidden" class="form-control" id="status" name="status" value="Administered" disabled>
+                    </div>
+                    <div class="mb-0">
+                        <label for="remark" class="form-label">Remark</label>
+                        <input type="text" class="form-control" id="remark" name="remark" >
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
  
 {{-- <script>
 
@@ -194,6 +225,14 @@ $(document).ready(function () {
         $('#batchIdR').val(batch);
         $('#statusCR').val(status);
         $('#vaccinationIdR').val(id);
+    });
+    $("#administrated").on("show.bs.modal", function (a) {
+        var id = $(a.relatedTarget).data('id-a');
+        var status = $(a.relatedTarget).data('status-a');
+        var batch = $(a.relatedTarget).data('batch-id-a');
+        $('#batchIdA').val(batch);
+        $('#statusCA').val(status);
+        $('#vaccinationIdA').val(id);
     });
 });
 </script>

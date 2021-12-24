@@ -41,8 +41,9 @@ class BatchController extends Controller
         $batch->batchNo = $request->batchNo;
         $batch->vaccineId =  $request->vaccineId;
         $batch->quantityAvailable =  $request->quantityAvailable;
+        $batch->quantityAdministered = 0;
         $batch->expiryDate = $request->expiryDate;
         $batch->save();
-        return redirect('/batch')->with('success','Successfully register test centre');
+        return redirect('/batch')->with('success','Successfully register new batch!');
     }
 }

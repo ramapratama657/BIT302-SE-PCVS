@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Software Engineering 2021" company="" webLink="http://" view-date="2021-10-03" view-index="0" gantt-divider-location="283" resource-divider-location="300" version="2.8.11" locale="en_ID">
+<?xml version="1.0" encoding="UTF-8"?><project name="Software Engineering 2021" company="" webLink="http://" view-date="2021-11-07" view-index="0" gantt-divider-location="283" resource-divider-location="300" version="2.8.11" locale="en_ID">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
         <field id="tpd3" name="Name" width="147" order="0"/>
@@ -115,7 +115,7 @@
                 <depend id="60" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="45" name="Iteration 1" color="#000000" meeting="false" start="2021-11-23" duration="20" complete="50" thirdDate="2021-11-23" thirdDate-constraint="0" expand="true">
+        <task id="45" name="Iteration 1" color="#000000" meeting="false" start="2021-11-23" duration="20" complete="100" thirdDate="2021-11-23" thirdDate-constraint="0" expand="true">
             <depend id="70" type="2" difference="0" hardness="Strong"/>
             <task id="60" name="Test Objectives" color="#8cb6ce" meeting="false" start="2021-11-23" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="61" type="2" difference="0" hardness="Strong"/>
@@ -136,48 +136,48 @@
             <task id="65" name="Presentation and Assignment 2" color="#8cb6ce" meeting="true" start="2021-12-03" duration="0" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="66" type="2" difference="1" hardness="Strong"/>
             </task>
-            <task id="66" name="Problem Solutions" color="#8cb6ce" meeting="false" start="2021-12-04" duration="1" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+            <task id="66" name="Problem Solutions" color="#8cb6ce" meeting="false" start="2021-12-04" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="67" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="67" name="Analysis/Design Updates" color="#8cb6ce" meeting="false" start="2021-12-06" duration="1" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+            <task id="67" name="Analysis/Design Updates" color="#8cb6ce" meeting="false" start="2021-12-06" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="68" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="68" name="Develop Prototype 2" color="#8cb6ce" meeting="false" start="2021-12-07" duration="7" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+            <task id="68" name="Develop Prototype 2" color="#8cb6ce" meeting="false" start="2021-12-07" duration="7" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="69" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="69" name="Produce Prototype 2" color="#8cb6ce" meeting="false" start="2021-12-15" duration="1" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+            <task id="69" name="Produce Prototype 2" color="#8cb6ce" meeting="false" start="2021-12-15" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="76" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="70" name="Iteration 2" color="#000000" meeting="false" start="2021-12-16" duration="6" complete="0" thirdDate="2021-12-16" thirdDate-constraint="0" expand="true">
+        <task id="70" name="Iteration 2" color="#000000" meeting="false" start="2021-12-16" duration="6" complete="100" thirdDate="2021-12-16" thirdDate-constraint="0" expand="true">
             <depend id="81" type="3" difference="0" hardness="Strong"/>
             <depend id="84" type="2" difference="0" hardness="Strong"/>
-            <task id="76" name="Test Objectives" color="#8cb6ce" meeting="false" start="2021-12-16" duration="2" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+            <task id="76" name="Test Objectives" color="#8cb6ce" meeting="false" start="2021-12-16" duration="2" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="77" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="77" name="Update Test Plan" color="#8cb6ce" meeting="false" start="2021-12-18" duration="1" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+            <task id="77" name="Update Test Plan" color="#8cb6ce" meeting="false" start="2021-12-18" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="78" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="78" name="Produce Test Resource" color="#8cb6ce" meeting="false" start="2021-12-20" duration="1" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+            <task id="78" name="Produce Test Resource" color="#8cb6ce" meeting="false" start="2021-12-20" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="79" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="79" name="Test Analysis Report" color="#8cb6ce" meeting="false" start="2021-12-21" duration="1" complete="0" thirdDate="2021-10-26" thirdDate-constraint="0" expand="true">
+            <task id="79" name="Test Analysis Report" color="#8cb6ce" meeting="false" start="2021-12-21" duration="1" complete="100" thirdDate="2021-10-26" thirdDate-constraint="0" expand="true">
                 <depend id="80" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="80" name="Produce Conclusion" color="#8cb6ce" meeting="false" start="2021-12-22" duration="1" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+            <task id="80" name="Produce Conclusion" color="#8cb6ce" meeting="false" start="2021-12-22" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="86" type="1" difference="0" hardness="Strong"/>
                 <depend id="89" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="81" name="Monitoring and Controlling Task" color="#000000" meeting="false" start="2021-11-27" duration="22" complete="0" thirdDate="2021-11-27" thirdDate-constraint="0" expand="true">
-            <task id="85" name="Update Github 1" color="#8cb6ce" meeting="false" start="2021-11-27" duration="3" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true"/>
-            <task id="86" name="Update Github 2" color="#8cb6ce" meeting="false" start="2021-12-22" duration="1" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true"/>
+        <task id="81" name="Monitoring and Controlling Task" color="#000000" meeting="false" start="2021-11-27" duration="22" complete="100" thirdDate="2021-11-27" thirdDate-constraint="0" expand="true">
+            <task id="85" name="Update Github 1" color="#8cb6ce" meeting="false" start="2021-11-27" duration="3" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true"/>
+            <task id="86" name="Update Github 2" color="#8cb6ce" meeting="false" start="2021-12-22" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="84" name="Closing Task" color="#000000" meeting="false" start="2021-12-23" duration="1" complete="0" thirdDate="2021-12-23" thirdDate-constraint="0" expand="true">
-            <task id="89" name="Presentation Preparation" color="#8cb6ce" meeting="false" start="2021-12-23" duration="1" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
+        <task id="84" name="Closing Task" color="#000000" meeting="false" start="2021-12-23" duration="1" complete="100" thirdDate="2021-12-23" thirdDate-constraint="0" expand="true">
+            <task id="89" name="Presentation Preparation" color="#8cb6ce" meeting="false" start="2021-12-23" duration="1" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true">
                 <depend id="90" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="90" name="Presentation and Assignment 3 Submission" color="#8cb6ce" meeting="true" start="2021-12-24" duration="0" complete="0" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true"/>
+            <task id="90" name="Presentation and Assignment 3 Submission" color="#8cb6ce" meeting="true" start="2021-12-24" duration="0" complete="100" thirdDate="2021-09-15" thirdDate-constraint="0" expand="true"/>
         </task>
     </tasks>
     <resources/>
